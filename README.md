@@ -17,24 +17,15 @@ permission). Goofys does not have an on disk data cache (checkout
 [catfs](https://github.com/kahing/catfs)), and consistency model is
 close-to-open.
 
+:bangbang: Ateliere uses a fork because the official repo is not mentained.
+
 # Installation
 
-* On Linux, install via [pre-built binaries](https://github.com/OwnZones/ateliere-goofys/releases/latest/download/goofys). 
-You may also need to install fuse too if you want to mount it on startup.
-
-* On macOS, install via [Homebrew](https://brew.sh/):
+* For Ateliere use-case, build from source with Go 1.17 or later, and add the resulting `goofys` binary to [node-tt](https://github.com/OwnZones/node-tt/tree/master/bin) and
+[zypline-activities](https://github.com/OwnZones/zypline-activities/tree/master/binaries) service repos:
 
 ```ShellSession
-$ brew cask install osxfuse
-$ brew install goofys
-```
-
-* Or build from source with Go 1.10 or later:
-
-```ShellSession
-$ export GOPATH=$HOME/work
-$ go get github.com/OwnZones/ateliere-goofys
-$ go install github.com/OwnZones/ateliere-goofys
+$ env GOOS=linux GOARCH=amd64 go build github.com/OwnZones/ateliere-goofys && mv ateliere-goofys goofys
 ```
 
 # Usage

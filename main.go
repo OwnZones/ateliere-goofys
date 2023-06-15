@@ -134,7 +134,7 @@ func massageArg0() {
 var Version = "use `make build' to fill version hash correctly"
 
 func main() {
-	VersionNumber = "0.24.0"
+	VersionNumber = "1.44.37"
 	VersionHash = Version
 
 	massagePath()
