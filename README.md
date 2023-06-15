@@ -21,8 +21,7 @@ close-to-open.
 
 # Installation
 
-* For Ateliere use-case, build from source with Go 1.17 or later, and add the resulting `goofys` binary to [node-tt](https://github.com/OwnZones/node-tt/tree/master/bin) and
-[zypline-activities](https://github.com/OwnZones/zypline-activities/tree/master/binaries) service repos:
+* For Ateliere use-case, build from source with Go 1.17 or later, and add the resulting `goofys` binary to service repos that uses it:
 
 ```ShellSession
 $ env GOOS=linux GOARCH=amd64 go build github.com/OwnZones/ateliere-goofys && mv ateliere-goofys goofys
